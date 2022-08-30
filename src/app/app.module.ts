@@ -4,6 +4,7 @@ import { registerLocaleData } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 import { AppComponent } from './app.component';
 import { BarNavComponent } from './components/bar-nav/bar-nav.component';
@@ -16,6 +17,8 @@ import { NotFoundPageComponent } from './components/not-found-page/not-found-pag
 import { CartComponent } from './components/cart/cart.component';
 import { AsideComponent } from './components/aside/aside.component';
 import { ProductsComponent } from './components/products/products.component';
+import { ButtonComponent } from './components/button/button.component';
+import { SingleProductComponent } from './components/single-product/single-product.component';
 
 @NgModule({
   declarations: [
@@ -29,12 +32,15 @@ import { ProductsComponent } from './components/products/products.component';
     NotFoundPageComponent,
     CartComponent,
     AsideComponent,
-    ProductsComponent
+    ProductsComponent,
+    ButtonComponent,
+    SingleProductComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [
     {
@@ -44,7 +50,7 @@ import { ProductsComponent } from './components/products/products.component';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { 
+export class AppModule {
   constructor(){
     registerLocaleData(fr.default);
   }
