@@ -14,9 +14,12 @@
             </li>
           </ol>
         </nav>
-        <div class="cart">
-          <app-cart></app-cart>
+       <!-- Le Panier -->
+       <section class="container pt-5">
+        <div class="float-end">
+          <i routerLink="/cart" class="fa-solid fa-2x fa-cart-plus"></i>
         </div>
+      </section>
       </div>
     </div>
   </div>
@@ -57,7 +60,7 @@
       </div>
       <div class="row">
         <div class="d-flex align-items-center pb-5">
-          <app-button text="Ajouter au panier"></app-button>
+          <app-button (click)="addToCart(product)" text="Ajouter au panier"></app-button>
           <div class="mx-3">
             <i class="fa-regular border fa-2x fa-heart"></i>
           </div>

@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import {NgxPaginationModule} from 'ngx-pagination';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { BarNavComponent } from './components/bar-nav/bar-nav.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -19,6 +19,9 @@ import { AsideComponent } from './components/aside/aside.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ButtonComponent } from './components/button/button.component';
 import { SingleProductComponent } from './components/single-product/single-product.component';
+import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { CommandeComponent } from './components/commande/commande.component';
 
 @NgModule({
   declarations: [
@@ -34,13 +37,18 @@ import { SingleProductComponent } from './components/single-product/single-produ
     AsideComponent,
     ProductsComponent,
     ButtonComponent,
-    SingleProductComponent
+    SingleProductComponent,
+    LoginComponent,
+    SignupComponent,
+    CommandeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     {
