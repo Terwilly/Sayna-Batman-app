@@ -22,6 +22,8 @@ import { SingleProductComponent } from './components/single-product/single-produ
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { CommandeComponent } from './components/commande/commande.component';
+import { ProductListComponent } from './components/eshop/product-list/product-list.component';
+import { CoursesModule } from './courses/courses.module';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,8 @@ import { CommandeComponent } from './components/commande/commande.component';
     SingleProductComponent,
     LoginComponent,
     SignupComponent,
-    CommandeComponent
+    CommandeComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +51,8 @@ import { CommandeComponent } from './components/commande/commande.component';
     HttpClientModule,
     NgxPaginationModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CoursesModule
   ],
   providers: [
     {

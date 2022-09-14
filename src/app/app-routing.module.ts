@@ -11,6 +11,7 @@ import { MonCompteComponent } from './components/mon-compte/mon-compte.component
 import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { SingleProductComponent } from './components/single-product/single-product.component';
+import { CoursesComponent } from './courses/courses.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path:'eshop/product/:id', component:SingleProductComponent},
   { path: 'inscription', component: SignupComponent },
   { path: 'connection', component: LoginComponent },
+  {path:'cours', loadChildren:()=> import('./courses/courses.module').then((m)=> m.CoursesModule), },
   {path: 'cart/commande', component: CommandeComponent, canActivate:[AuthGuard]},
   {path:'**', component:NotFoundPageComponent}
 ];
