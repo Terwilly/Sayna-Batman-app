@@ -9,11 +9,11 @@ export class WishlistService {
   constructor(private http:HttpClient) { }
 
   addToWishlist(productId:any){
-    return this.http.post('http://localhost:3000/wishlist', productId)
+    return this.http.post('https://sayna-batman-api.herokuapp.com/wishlist', productId)
   }
 
   deleteFromWishlist(productId:any){
-    return this.http.delete('http://localhost:3000/wishlist/' + productId)
+    return this.http.delete('https://sayna-batman-api.herokuapp.com/wishlist/' + productId)
   }
 
 }

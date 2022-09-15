@@ -16,12 +16,12 @@ export class CartService {
     // this.cartItemList.push(product);
     // this.productList.next(this.cartItemList);
     // this.getTotalPrice();
-    return this.http.post('http://localhost:3000/cart',product)
+    return this.http.post('https://sayna-batman-api.herokuapp.com/cart',product)
   }
 
   getProducts() {
     // return this.productList.asObservable();
-    return this.http.get<any>('http://localhost:3000/cart');
+    return this.http.get<any>('https://sayna-batman-api.herokuapp.com/cart');
   }
 
 
